@@ -14,12 +14,10 @@ const userResButton = document.getElementById("user-restricted-btn")
 
 appResButton.addEventListener("click", () => {
     fetch(appResUrl, {
-        mode: "no-cors",
+        method: "GET",
         headers: {
-            // "Access-Control-Request-Headers": "apikey",
             "apikey": "zdb9BLQ28GMcNNMtjWS7KSBhRzHF5j98",
-            // "Access-Control-Request-Method": "GET",
-            // "Access-Control-Allow-Origin": "null"
+          
         }
     })
         .then(res => res.json())

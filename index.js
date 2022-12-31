@@ -4,6 +4,8 @@ const openUrl = "https://sandbox.api.service.nhs.uk/hello-world/hello/world"
 const appResButton = document.getElementById("app-restricted-btn")
 const appResUrl = "https://sandbox.api.service.nhs.uk/hello-world/hello/application"
 
+const userResButton = document.getElementById("user-restricted-btn")
+
 openButton.addEventListener("click", () => {
     fetch(openUrl)
         .then(res => res.json())
@@ -13,7 +15,8 @@ openButton.addEventListener("click", () => {
 appResButton.addEventListener("click", () => {
     fetch(appResUrl, {
         headers: {
-            "apikey": "zdb9BLQ28GMcNNMtjWS7KSBhRzHF5j98"
+            "apikey": "zdb9BLQ28GMcNNMtjWS7KSBhRzHF5j98",
+            "Access-Control-Allow-Credentials": true
         }
     })
         .then(res => res.json())

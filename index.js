@@ -16,8 +16,7 @@ appResButton.addEventListener("click", () => {
     fetch(appResUrl, {
         method: "GET",
         headers: {
-            "apikey": "zdb9BLQ28GMcNNMtjWS7KSBhRzHF5j98",
-          
+            "apikey": "zdb9BLQ28GMcNNMtjWS7KSBhRzHF5j98"
         }
     })
         .then(res => res.json())
